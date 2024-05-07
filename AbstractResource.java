@@ -1,14 +1,13 @@
-public class Journal extends AbstractResource {
+public abstract class AbstractResource implements LibraryResource {
   
-    public Journal(String title) {
-        super(title);
+    protected String title;
+
+    public AbstractResource(String title) {
+        this.title = title;
     }
 
     @Override
-    public void checkOutResource() {
-        System.out.println("Checking out journal: " + title);
-        // Journal-specific checkout logic
-    }
+    public abstract void checkOutResource();
 
     @Override
     public String getTitle() {
