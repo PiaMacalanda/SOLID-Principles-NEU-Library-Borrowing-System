@@ -1,5 +1,6 @@
 public interface LibraryResource {
   
     void checkOutResource();
-    String getTitle(); // Method to get the title of the resource
+    String getTitle();
+    String getClassification(); // Method to get the classification of the resource
 }
